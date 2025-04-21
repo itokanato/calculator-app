@@ -29,29 +29,29 @@
             
             <!-- キーパッド部分 -->
             <div id="keypad" class="grid grid-cols-4 gap-3 select-none">
-                <button id="delete" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">C</button>
+                <button onclick="clearDisplay()" id="delete" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">C</button>
                 <button id="toggle-sign" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">+/-</button>
                 <button id="backspace" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">⌫</button>
-                <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">÷</button>
+                <button onclick="appendOperator('÷')" id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">÷</button>
 
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">7</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">8</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">9</button>
-                <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">×</button>
+                <button onclick="appendNumber('7')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">7</button>
+                <button onclick="appendNumber('8')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">8</button>
+                <button onclick="appendNumber('9')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">9</button>
+                <button onclick="appendOperator('×')" id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">×</button>
 
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">6</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">5</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">4</button>
-                <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">-</button>
+                <button onclick="appendNumber('4')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">4</button>
+                <button onclick="appendNumber('5')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">5</button>
+                <button onclick="appendNumber('6')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">6</button>
+                <button onclick="appendOperator('-')" id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">-</button>
 
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">1</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">2</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">3</button>
-                <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">+</button>                
+                <button onclick="appendNumber('1')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">1</button>
+                <button onclick="appendNumber('2')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">2</button>
+                <button onclick="appendNumber('3')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">3</button>
+                <button onclick="appendOperator('+')" id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">+</button>                
 
-                <button id="key num" class="col-span-2 bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">0</button>
-                <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">.</button>
-                <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">=</button>
+                <button onclick="appendNumber('0')" id="key num" class="col-span-2 bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">0</button>
+                <button onclick="appendNumber('.')" id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">.</button>
+                <button onclick="appendOperator('=')" id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">=</button>
             </div>
         </div>
     </div>
