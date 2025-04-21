@@ -20,8 +20,8 @@
 </head>
 <body class="bg-gray-100">
     <div class="text-center text-2xl font-bold">iPhone風　電卓アプリ</div>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-        <div class="w-64 rounded-[1.75rem] bg-neutral-900 p-4 pt-6 shadow-lg">
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 select-none">
+        <div class="w-64 rounded-[1.75rem] bg-neutral-900 p-4 pt-6 shadow-lg select-none">
             <!-- 表示ディスプレイ部分 -->
             <div id="display" class="h-16 w-full rounded-lg bg-neutral-900 text-right text-4xl font-thin text-gray-200 flex items-end justify-end px-3 pb-2 mb-4 select-none">
                 0
@@ -29,9 +29,9 @@
             
             <!-- キーパッド部分 -->
             <div id="keypad" class="grid grid-cols-4 gap-3 select-none">
-                <button id="delete" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">C</button>
-                <button id="toggle-sign" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">+/-</button>
-                <button id="backspace" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold">⌫</button>
+                <button id="delete" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">C</button>
+                <button id="toggle-sign" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">+/-</button>
+                <button id="backspace" class="bg-neutral-400 text-black hover:bg-neutral-500 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">⌫</button>
                 <button id="key op" class="bg-yellow-600 text-gray-200 hover:bg-yellow-700 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">÷</button>
 
                 <button id="key num" class="bg-neutral-700 text-gray-200 hover:bg-neutral-800 rounded p-2 h-12 flex items-center justify-center rounded-3xl text-lg font-semibold select-none">7</button>
