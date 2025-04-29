@@ -1,22 +1,40 @@
 // 電卓の状態を管理する変数
 // WHY:変数がグローバルスコープで宣言されていないと関数内で参照できない。
-let currentInput = '0'; // ディスプレイに表示する値
+let currentInput = "0"; // ディスプレイに表示する値
 let firstNumber = null; // 最初の値
 let operator = null; // 演算子
 let isWaitingForSecondNumber = false; // 2つ目の値を待っているかどうかを示すフラグ値
 
 // 表示ディスプレイをクリアする
 window.clearDisplay = function() {
-    currentInput = '';
+    currentInput = "";
     firstNumber = null;
     operator = null;
     isWaitingForSecondNumber = false;
     updateDisplay();
 };
 
+// 符号を反転させる
+window.toggleSign = function() {
+    if (currentInput !== "0") {
+        if (currentInput.startsWith("-")) {
+            currentInput = currentInput.substring(1);
+        } else {
+            currentInput = "-" + currentInput;
+        }
+        updateDisplay();
+    }
+}
+
+// バックスペースボタンで1文字削除
+window.backspace = function() {
+    currentInput = currentInput.slice(0, -1);
+    updateDisplay();
+}
+
 // 表示ディスプレイを更新する
 window.updateDisplay = function() {
-    document.getElementById('display').textContent = currentInput;
+    document.getElementById("display").textContent = currentInput;
 };
 
 // 数字を表示ディスプレイに追加する
@@ -27,7 +45,7 @@ window.appendNumber = function(number) {
         isWaitingForSecondNumber = false;
     } else {
         // 2つ目の値を待っていない場合は、1つ目の値を更新する
-        currentInput = (currentInput === '0' ? number : currentInput + number);
+        currentInput = (currentInput === "0" ? number : currentInput + number);
     }
     updateDisplay();
 }
@@ -55,4 +73,3 @@ window.appendOperator = function(operator) {
         updateDisplay();
     }
 }
-
